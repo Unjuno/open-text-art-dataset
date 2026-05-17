@@ -5,6 +5,7 @@ Checks:
 - JSON syntax
 - JSON Schema
 - duplicate IDs
+- duplicate art strings
 - line_count consistency
 """
 
@@ -25,11 +26,22 @@ def count_lines(text: str) -> int:
     return text.count("\n") + 1
 
 
+def normalize_art_for_duplicate_check(text: str) -> str:
+    """Normalize only accidental outer whitespace.
+
+    Do not Unicode-normalize or collapse inner spaces because text art can depend on
+    exact characters and spacing.
+    """
+
+    return text.strip("\n")
+
+
 def main() -> int:
     schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
     validator = Draft202012Validator(schema)
 
-    seen_ids: set[str] = set()
+    seen_ids: dict[str, Path] = {}
+    seen_art: dict[str, Path] = {}
     failed = 0
     checked = 0
 
@@ -46,10 +58,25 @@ def main() -> int:
         errors = sorted(validator.iter_errors(record), key=lambda e: e.path)
 
         record_id = record.get("id")
-        if record_id in seen_ids:
-            errors.append(ValueError(f"duplicate id: {record_id}"))
-        elif isinstance(record_id, str):
-            seen_ids.add(record_id)
+        if isinstance(record_id, str):
+            if record_id in seen_ids:
+                errors.append(
+                    ValueError(f"duplicate id: {record_id} already used in {seen_ids[record_id]}")
+                )
+            else:
+                seen_ids[record_id] = path
+
+        art = record.get("art")
+        if isinstance(art, str):
+            art_key = normalize_art_for_duplicate_check(art)
+            if art_key in seen_art:
+                errors.append(
+                    ValueError(
+                        f"duplicate art string: same art already used in {seen_art[art_key]}"
+                    )
+                )
+            else:
+                seen_art[art_key] = path
 
         actual_lines = count_lines(record.get("art", ""))
         declared_lines = record.get("line_count")
