@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000001",
+  "art": "＼(^o^)／",
+  "art_type": "kaomoji",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "もう終わりだ＼(^o^)／",
+  "intended_meaning": "自虐的な諦め",
+  "plain_text": "もうだめそうです、という気持ちを冗談っぽく表している。",
+  "emotion": ["despair", "humor"],
+  "tone": "joking_negative",
+  "possible_misreadings": ["単純な喜びとして解釈する"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
