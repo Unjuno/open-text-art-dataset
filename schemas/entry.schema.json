@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Unjuno/open-text-art-dataset/schemas/entry.schema.json",
+  "title": "Open Text Art Dataset Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "art",
+    "art_type",
+    "charset_class",
+    "line_count",
+    "context_text",
+    "intended_meaning",
+    "plain_text",
+    "emotion",
+    "tone",
+    "possible_misreadings",
+    "display_requirements",
+    "cultural_context",
+    "source_type",
+    "license",
+    "review_status"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^text-art-[0-9]{6}$" },
+    "art": { "type": "string", "minLength": 1 },
+    "art_type": {
+      "type": "string",
+      "enum": [
+        "ascii_7bit",
+        "ansi_art",
+        "shift_jis_style",
+        "kaomoji",
+        "unicode_text_art",
+        "single_line_symbol",
+        "multi_line_text_picture"
+      ]
+    },
+    "charset_class": {
+      "type": "string",
+      "enum": [
+        "ascii_7bit",
+        "extended_ascii_or_ansi",
+        "shift_jis",
+        "unicode_text",
+        "mixed",
+        "unknown"
+      ]
+    },
+    "line_count": { "type": "integer", "minimum": 1 },
+    "context_text": { "type": "string", "minLength": 1 },
+    "intended_meaning": { "type": "string", "minLength": 1 },
+    "plain_text": { "type": "string", "minLength": 1 },
+    "emotion": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "tone": { "type": "string", "minLength": 1 },
+    "possible_misreadings": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "display_requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "monospace_required",
+        "known_font_dependency",
+        "preserve_line_breaks"
+      ],
+      "properties": {
+        "monospace_required": { "type": "boolean" },
+        "known_font_dependency": { "type": "boolean" },
+        "preserve_line_breaks": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "cultural_context": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["original", "permission_granted", "public_domain", "cc0_compatible", "unknown"]
+    },
+    "license": { "type": "string", "minLength": 1 },
+    "review_status": {
+      "type": "string",
+      "enum": ["draft", "needs_review", "reviewed", "rejected", "deprecated"]
+    }
+  }
+}
