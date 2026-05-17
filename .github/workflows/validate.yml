@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  validate-jsonl:
+  validate-dataset:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -19,8 +19,17 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
-      - name: Validate sample dataset
+      - name: Validate entry files
+        run: python scripts/validate_entries.py
+
+      - name: Build JSONL artifacts
+        run: python scripts/build_jsonl.py
+
+      - name: Validate generated sample dataset
         run: python scripts/validate_jsonl.py data/samples.jsonl --schema schemas/entry.schema.json
 
-      - name: Validate reviewed dataset
+      - name: Validate generated reviewed dataset
         run: python scripts/validate_jsonl.py data/reviewed/v0.1.jsonl --schema schemas/entry.schema.json
+
+      - name: Ensure generated artifacts are committed
+        run: git diff --exit-code
