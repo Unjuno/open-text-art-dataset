@@ -17,6 +17,33 @@ This repository does **not** primarily build models. It provides reusable learni
 
 このリポジトリは、モデル作成そのものを主目的にしません。下流のモデル開発者、研究者、アクセシビリティツール、TTS前処理、チャット要約、文化研究で使える学習・評価データを整備します。
 
+## Editing model
+
+Source-of-truth entries are stored as one JSON file per entry:
+
+```text
+data/entries/text-art-000001.json
+```
+
+Generated artifacts:
+
+```text
+data/samples.jsonl
+data/reviewed/v0.1.jsonl
+```
+
+Build JSONL artifacts:
+
+```bash
+python scripts/build_jsonl.py
+```
+
+Validate dataset files:
+
+```bash
+python scripts/validate_jsonl.py data/samples.jsonl data/reviewed/v0.1.jsonl
+```
+
 ## Initial scope
 
 - ASCII art
