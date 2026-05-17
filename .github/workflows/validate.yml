@@ -21,3 +21,6 @@ jobs:
 
       - name: Validate sample dataset
         run: python scripts/validate_jsonl.py data/samples.jsonl --schema schemas/entry.schema.json
+
+      - name: Validate reviewed dataset
+        run: python scripts/validate_jsonl.py data/reviewed/v0.1.jsonl --schema schemas/entry.schema.json
