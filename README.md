@@ -6,9 +6,9 @@ Open dataset for text-based visual expressions such as ASCII art, ANSI art, Shif
 
 ## Status
 
-Current initial dataset size: **30 reviewed entries**.
+Current initial dataset size: **50 reviewed entries**.
 
-現在の初期データ数: **レビュー済み30件**。
+現在の初期データ数: **レビュー済み50件**。
 
 Maintainer setup: [docs/maintainer/branch-protection.md](docs/maintainer/branch-protection.md)
 
