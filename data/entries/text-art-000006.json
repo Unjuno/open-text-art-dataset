@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000006",
+  "art": "m(_ _)m",
+  "art_type": "kaomoji",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "すみませんm(_ _)m",
+  "intended_meaning": "謝罪・深く頭を下げる表現",
+  "plain_text": "すみません。深く謝っています。",
+  "emotion": ["apology"],
+  "tone": "apologetic",
+  "possible_misreadings": ["顔文字の形を認識できず、単なる記号列として処理する"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
