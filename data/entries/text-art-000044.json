@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000044",
+  "art": "（´・∀・｀）",
+  "art_type": "shift_jis_style",
+  "charset_class": "shift_jis",
+  "line_count": 1,
+  "context_text": "まあ悪くない（´・∀・｀）",
+  "intended_meaning": "軽い肯定・余裕のある反応",
+  "plain_text": "悪くないと感じており、少し余裕のある態度で受け止めている。",
+  "emotion": ["confidence"],
+  "tone": "casual",
+  "possible_misreadings": ["強い喜びとして過剰に読む", "顔文字の軽さを落とす"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "bbs_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
