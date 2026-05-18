@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000010",
+  "art": "┐(´д｀)┌",
+  "art_type": "unicode_text_art",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "また同じエラーか┐(´д｀)┌",
+  "intended_meaning": "呆れ・困り・どうしようもないという反応",
+  "plain_text": "また同じエラーが出て、呆れて困っている。",
+  "emotion": ["confusion", "despair"],
+  "tone": "soft_negative",
+  "possible_misreadings": ["単純な怒りとして解釈する", "文字幅の違いで形が崩れる"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
