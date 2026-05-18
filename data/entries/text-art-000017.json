@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000017",
+  "art": "┌────┐\n│ UI │\n└────┘",
+  "art_type": "unicode_text_art",
+  "charset_class": "unicode_text",
+  "line_count": 3,
+  "context_text": "簡単なUI枠を示す。\n┌────┐\n│ UI │\n└────┘",
+  "intended_meaning": "罫線文字で作った小さなUI枠",
+  "plain_text": "罫線文字を使って、UIの小さな枠を表している。",
+  "emotion": ["neutral"],
+  "tone": "technical_diagram",
+  "possible_misreadings": ["罫線の文字幅が崩れると箱として認識できない", "単なる記号列として処理される"],
+  "display_requirements": {
+    "monospace_required": true,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["terminal_culture", "general_internet"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
