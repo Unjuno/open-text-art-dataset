@@ -1,7 +1,6 @@
 name: New text-art entry
 description: Propose a new text-art dataset entry without editing JSON directly.
 title: "New entry: "
-labels: ["data-entry", "needs-triage"]
 body:
   - type: markdown
     attributes:
