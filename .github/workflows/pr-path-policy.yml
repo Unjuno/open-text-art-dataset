@@ -1,0 +1,168 @@
+name: Check PR path policy
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check-pr-path-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check changed file scope
+        id: policy
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100,
+            });
+
+            const names = files.map((file) => file.filename);
+            const statuses = new Map(files.map((file) => [file.filename, file.status]));
+
+            const isEntry = (name) => /^data\/entries\/text-art-\d{6}\.json$/.test(name);
+            const isAnyEntryPath = (name) => name.startsWith('data/entries/');
+            const isGenerated = (name) =>
+              name === 'data/samples.jsonl' || name === 'data/reviewed/v0.1.jsonl';
+            const isAllowedDataPrPath = (name) =>
+              isEntry(name) || isGenerated(name) || name === 'README.md';
+            const isRestricted = (name) =>
+              name.startsWith('.github/') ||
+              name.startsWith('scripts/') ||
+              name.startsWith('schemas/') ||
+              name === 'DATA_LICENSE.md' ||
+              name === 'LICENSE' ||
+              name.startsWith('LICENSE-');
+
+            const entryFiles = names.filter(isEntry);
+            const malformedEntryPaths = names.filter((name) => isAnyEntryPath(name) && !isEntry(name));
+            const generatedFiles = names.filter(isGenerated);
+            const restrictedFiles = names.filter(isRestricted);
+            const hasEntryChanges = entryFiles.length > 0;
+            const hasGeneratedChanges = generatedFiles.length > 0;
+
+            const failures = [];
+            const warnings = [];
+
+            if (restrictedFiles.length > 0) {
+              failures.push([
+                'Restricted files were changed. Data-entry PRs must not modify workflows, scripts, schemas, or license policy files.',
+                restrictedFiles,
+              ]);
+            }
+
+            if (malformedEntryPaths.length > 0) {
+              failures.push([
+                'Files under data/entries/ must use the canonical name form data/entries/text-art-000000.json.',
+                malformedEntryPaths,
+              ]);
+            }
+
+            for (const file of entryFiles) {
+              const status = statuses.get(file);
+              if (status === 'removed') {
+                failures.push([
+                  'Dataset entry deletion is not allowed in a normal data-entry PR. Open a separate maintainer discussion if removal is needed.',
+                  [file],
+                ]);
+              }
+            }
+
+            if (hasGeneratedChanges && !hasEntryChanges) {
+              failures.push([
+                'Generated dataset files changed without corresponding data/entries/*.json changes.',
+                generatedFiles,
+              ]);
+            }
+
+            if (hasEntryChanges) {
+              const outOfScope = names.filter((name) => !isAllowedDataPrPath(name) && !isRestricted(name));
+              if (outOfScope.length > 0) {
+                warnings.push([
+                  'This data-entry PR also changes files outside the normal data-entry scope. Keep data additions focused unless the extra files are clearly necessary.',
+                  outOfScope,
+                ]);
+              }
+            }
+
+            const lines = [];
+            lines.push('## PR path policy result');
+            lines.push('');
+            lines.push(`Changed files: ${names.length}`);
+            lines.push(`Entry files: ${entryFiles.length}`);
+            lines.push(`Generated files: ${generatedFiles.length}`);
+            lines.push(`Restricted files: ${restrictedFiles.length}`);
+            lines.push('');
+
+            if (failures.length === 0) {
+              lines.push('✅ No path-policy failures detected.');
+            } else {
+              lines.push('❌ Path-policy failures detected.');
+              lines.push('');
+              for (const [message, list] of failures) {
+                lines.push(`### ${message}`);
+                lines.push('');
+                lines.push('```text');
+                for (const item of list) lines.push(item);
+                lines.push('```');
+                lines.push('');
+              }
+            }
+
+            if (warnings.length > 0) {
+              lines.push('## Warnings');
+              lines.push('');
+              for (const [message, list] of warnings) {
+                lines.push(`### ${message}`);
+                lines.push('');
+                lines.push('```text');
+                for (const item of list) lines.push(item);
+                lines.push('```');
+                lines.push('');
+              }
+            }
+
+            lines.push('## Normal data-entry PR scope');
+            lines.push('');
+            lines.push('Allowed normal data-entry changes:');
+            lines.push('');
+            lines.push('```text');
+            lines.push('data/entries/text-art-*.json');
+            lines.push('data/samples.jsonl');
+            lines.push('data/reviewed/v0.1.jsonl');
+            lines.push('README.md dataset count');
+            lines.push('```');
+            lines.push('');
+            lines.push('Do not mix data-entry changes with workflow, schema, script, or license-policy changes. Open a separate PR for those.');
+
+            const body = lines.join('\n');
+            await core.summary.addRaw(body).write();
+            core.setOutput('has_failures', failures.length > 0 ? 'true' : 'false');
+            core.setOutput('comment_body', body);
+
+      - name: Comment when path policy fails
+        if: steps.policy.outputs.has_failures == 'true'
+        continue-on-error: true
+        uses: actions/github-script@v7
+        env:
+          COMMENT_BODY: ${{ steps.policy.outputs.comment_body }}
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: process.env.COMMENT_BODY,
+            });
+
+      - name: Fail when path policy fails
+        if: steps.policy.outputs.has_failures == 'true'
+        run: |
+          echo "PR path policy failed. See the workflow summary or PR comment."
+          exit 1
