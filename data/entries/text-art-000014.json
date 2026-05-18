@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000014",
+  "art": "(-_-;)",
+  "art_type": "kaomoji",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "また設定ミスか(-_-;)",
+  "intended_meaning": "困惑・冷や汗・疲れ",
+  "plain_text": "また設定ミスがあり、困って少し疲れている。",
+  "emotion": ["confusion"],
+  "tone": "soft_negative",
+  "possible_misreadings": ["無表情としてだけ解釈し、冷や汗や困惑を落とす"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
