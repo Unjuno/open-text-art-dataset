@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000004",
+  "art": "(｀・ω・´)",
+  "art_type": "kaomoji",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "今日は最後までやる(｀・ω・´)",
+  "intended_meaning": "気合い・前向きな決意",
+  "plain_text": "今日は最後までやる、という強い意志を表している。",
+  "emotion": ["confidence"],
+  "tone": "positive_determined",
+  "possible_misreadings": ["怒っている表情としてだけ解釈する"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
