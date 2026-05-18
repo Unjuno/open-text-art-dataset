@@ -1,7 +1,12 @@
-.PHONY: build validate validate-entries validate-jsonl validate-policy check duplicates
+.PHONY: sync build update-readme-count validate validate-entries validate-jsonl validate-policy check duplicates
+
+sync: build update-readme-count
 
 build:
 	python scripts/build_jsonl.py
+
+update-readme-count:
+	python scripts/update_readme_count.py
 
 validate-entries:
 	python scripts/validate_entries.py
@@ -12,7 +17,7 @@ validate-jsonl:
 validate-policy:
 	python scripts/validate_dataset_policy.py
 
-validate: validate-entries build validate-jsonl validate-policy
+validate: validate-entries sync validate-jsonl validate-policy
 
 duplicates:
 	python scripts/report_near_duplicates.py
