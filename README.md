@@ -10,6 +10,8 @@ Current initial dataset size: **20 reviewed entries**.
 
 現在の初期データ数: **レビュー済み20件**。
 
+Maintainer setup: [docs/maintainer/branch-protection.md](docs/maintainer/branch-protection.md)
+
 ## How to contribute
 
 There are two contribution paths.
