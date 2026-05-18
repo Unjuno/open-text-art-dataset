@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000016",
+  "art": "[ OK ]",
+  "art_type": "ansi_art",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "Service check: [ OK ]",
+  "intended_meaning": "端末風の成功表示",
+  "plain_text": "サービスの確認が成功したことを端末風に示している。",
+  "emotion": ["neutral"],
+  "tone": "technical_status",
+  "possible_misreadings": ["装飾ではなく通常の括弧付き文字列としてだけ処理する"],
+  "display_requirements": {
+    "monospace_required": true,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["terminal_culture", "general_internet"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
