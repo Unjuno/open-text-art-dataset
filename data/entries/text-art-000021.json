@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000021",
+  "art": ";)",
+  "art_type": "ascii_7bit",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "I fixed it ;)",
+  "intended_meaning": "冗談めいた自信・軽いウィンク",
+  "plain_text": "修正できたことを、少し得意げに冗談っぽく伝えている。",
+  "emotion": ["confidence", "humor"],
+  "tone": "joking",
+  "possible_misreadings": ["セミコロンと括弧としてだけ読む", "皮肉として過剰に解釈する"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["western_emoticon", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
