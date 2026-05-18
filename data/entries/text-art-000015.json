@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000015",
+  "art": "(╯°□°）╯︵ ┻━┻",
+  "art_type": "unicode_text_art",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "またビルド失敗(╯°□°）╯︵ ┻━┻",
+  "intended_meaning": "怒り・苛立ちを誇張した表現",
+  "plain_text": "またビルドが失敗して、机をひっくり返すほど苛立っていることを冗談っぽく表している。",
+  "emotion": ["anger", "humor"],
+  "tone": "joking_negative",
+  "possible_misreadings": ["本当に暴力的行動を示すものとして過剰に解釈する", "文字幅の違いで机投げの形が崩れる"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["general_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
