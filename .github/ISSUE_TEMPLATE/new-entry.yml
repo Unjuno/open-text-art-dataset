@@ -1,0 +1,125 @@
+name: New text-art entry
+description: Propose a new text-art dataset entry without editing JSON directly.
+title: "New entry: "
+labels: ["data-entry", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit only original or clearly licensed text art. Do not paste copied forum or social-media posts without permission.
+
+  - type: input
+    id: art
+    attributes:
+      label: Text art
+      description: The text art string itself.
+      placeholder: "orz"
+    validations:
+      required: true
+
+  - type: input
+    id: context
+    attributes:
+      label: Context text
+      description: A short example sentence showing how the text art is used.
+      placeholder: "完全に負けたorz"
+    validations:
+      required: true
+
+  - type: input
+    id: meaning
+    attributes:
+      label: Intended meaning
+      description: What does this text art mean in the given context?
+      placeholder: "敗北感・落胆"
+    validations:
+      required: true
+
+  - type: textarea
+    id: plain_text
+    attributes:
+      label: Plain-text paraphrase
+      description: A natural-language paraphrase suitable for TTS, summarization, or accessibility.
+      placeholder: "完全に負けて落ち込んでいる。"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: art_type
+    attributes:
+      label: Art type
+      options:
+        - ascii_7bit
+        - ansi_art
+        - shift_jis_style
+        - kaomoji
+        - unicode_text_art
+        - single_line_symbol
+        - multi_line_text_picture
+    validations:
+      required: true
+
+  - type: dropdown
+    id: charset_class
+    attributes:
+      label: Character-set class
+      options:
+        - ascii_7bit
+        - extended_ascii_or_ansi
+        - shift_jis
+        - unicode_text
+        - mixed
+        - unknown
+    validations:
+      required: true
+
+  - type: input
+    id: emotion
+    attributes:
+      label: Emotion labels
+      description: Comma-separated labels, e.g. despair, humor.
+      placeholder: "despair, sadness"
+    validations:
+      required: true
+
+  - type: input
+    id: tone
+    attributes:
+      label: Tone label
+      placeholder: "soft_negative"
+    validations:
+      required: true
+
+  - type: textarea
+    id: possible_misreadings
+    attributes:
+      label: Possible misreadings
+      description: List possible mistakes, one per line.
+      placeholder: "単なる文字列として読むだけで意味を取らない"
+
+  - type: checkboxes
+    id: display_requirements
+    attributes:
+      label: Display requirements
+      options:
+        - label: Monospace font is required.
+        - label: Known font dependency exists.
+        - label: Line breaks must be preserved.
+          required: true
+
+  - type: input
+    id: cultural_context
+    attributes:
+      label: Cultural context labels
+      description: Comma-separated labels, e.g. japanese_internet, chat_culture.
+      placeholder: "general_internet, chat_culture"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: license_confirmation
+    attributes:
+      label: License confirmation
+      options:
+        - label: I created this entry myself or have the right to submit it under the dataset license.
+          required: true
