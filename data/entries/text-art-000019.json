@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000019",
+  "art": "(；ﾟДﾟ)",
+  "art_type": "kaomoji",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "本番DBだった(；ﾟДﾟ)",
+  "intended_meaning": "強い驚き・焦り",
+  "plain_text": "それが本番データベースだったことに気づき、強く驚いて焦っている。",
+  "emotion": ["surprise", "confusion"],
+  "tone": "urgent",
+  "possible_misreadings": ["単なる驚きだけとして処理し、焦りを落とす", "顔文字として認識できない"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
