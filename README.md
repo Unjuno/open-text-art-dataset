@@ -10,6 +10,26 @@ Current initial dataset size: **20 reviewed entries**.
 
 現在の初期データ数: **レビュー済み20件**。
 
+## How to contribute
+
+There are two contribution paths.
+
+| Contributor type | Recommended path |
+|---|---|
+| Non-coders / casual contributors | Open a **New text-art entry** issue and fill in the form. |
+| Coders / maintainers | Add or edit one JSON file under `data/entries/`, then open a pull request. |
+
+Do not submit copied forum posts, copied social media posts, unknown-license archives, or private information.
+
+参加方法は2つあります。
+
+| 参加者 | 推奨方法 |
+|---|---|
+| JSONを書きたくない人 | **New text-art entry** Issueフォームから提案する |
+| JSONを書ける人 | `data/entries/` に1件1JSONで追加し、Pull Requestを出す |
+
+掲示板・SNS投稿の無断コピー、権利不明AA集、個人情報は投稿しないでください。
+
 ## Quick start
 
 Install dependencies:
