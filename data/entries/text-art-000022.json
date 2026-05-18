@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000022",
+  "art": ":/",
+  "art_type": "ascii_7bit",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "This result is not ideal :/",
+  "intended_meaning": "不満・微妙な反応",
+  "plain_text": "結果が理想的ではなく、少し不満や困惑を感じている。",
+  "emotion": ["confusion"],
+  "tone": "soft_negative",
+  "possible_misreadings": ["コロンとスラッシュとしてだけ読む", "強い怒りとして解釈する"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["western_emoticon", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
