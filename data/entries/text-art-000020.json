@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000020",
+  "art": "o7",
+  "art_type": "single_line_symbol",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "了解、対応します o7",
+  "intended_meaning": "敬礼・了解・任務を引き受ける態度",
+  "plain_text": "了解し、敬礼するような気持ちで対応を引き受けている。",
+  "emotion": ["confidence"],
+  "tone": "positive_determined",
+  "possible_misreadings": ["英字と数字としてだけ処理する", "敬礼の形として認識できない"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["gaming_culture", "chat_culture", "general_internet"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
