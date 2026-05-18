@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000000",
+  "art": "",
+  "art_type": "kaomoji",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "",
+  "intended_meaning": "",
+  "plain_text": "",
+  "emotion": ["neutral"],
+  "tone": "casual",
+  "possible_misreadings": [],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["general_internet"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "draft"
+}
