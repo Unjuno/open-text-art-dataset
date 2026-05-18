@@ -37,7 +37,23 @@ Run local checks:
 make check
 ```
 
-CI validates entries, checks duplicate IDs, checks duplicate `art` strings, checks `line_count`, rebuilds JSONL artifacts, reports near-duplicate candidates, and fails if generated artifacts are not committed.
+CI validates entries, checks duplicate IDs, checks duplicate `art` strings, checks `line_count`, rebuilds JSONL artifacts, validates dataset policy rules, reports near-duplicate candidates, and fails if generated artifacts are not committed.
+
+## Automated policy checks
+
+The dataset policy validator fails on deterministic problems such as:
+
+- filename and `id` mismatch
+- reviewed entry with `source_type: unknown`
+- reviewed entry with unsupported license
+- generated JSONL IDs not matching source entries
+- README reviewed-entry count mismatch
+
+It also emits warnings for quality signals that require human judgment, such as:
+
+- `context_text` not containing the `art` string
+- very short `plain_text`
+- unknown `emotion`, `tone`, or `cultural_context` labels
 
 ## English
 
