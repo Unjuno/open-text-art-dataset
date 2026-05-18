@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000041",
+  "art": "（ ´_ゝ`）",
+  "art_type": "shift_jis_style",
+  "charset_class": "shift_jis",
+  "line_count": 1,
+  "context_text": "なるほど（ ´_ゝ`）",
+  "intended_meaning": "落ち着いた反応・やや冷めた受け止め",
+  "plain_text": "なるほどと受け止めているが、少し冷静で淡々とした態度を示している。",
+  "emotion": ["neutral"],
+  "tone": "casual",
+  "possible_misreadings": ["無表情ではなく皮肉として過剰に読む", "Shift_JIS風の顔文字として認識しない"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "bbs_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
