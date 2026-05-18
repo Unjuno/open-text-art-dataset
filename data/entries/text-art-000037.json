@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000037",
+  "art": "+----+----+\n| ID | OK |\n+----+----+",
+  "art_type": "multi_line_text_picture",
+  "charset_class": "ascii_7bit",
+  "line_count": 3,
+  "context_text": "簡単な表を示す。\n+----+----+\n| ID | OK |\n+----+----+",
+  "intended_meaning": "ASCII文字で作った小さな表",
+  "plain_text": "ASCII文字を使って、IDとOKの列を持つ小さな表を表している。",
+  "emotion": ["neutral"],
+  "tone": "technical_diagram",
+  "possible_misreadings": ["等幅表示でないと表として崩れる", "縦線や横線を構造として扱わない"],
+  "display_requirements": {
+    "monospace_required": true,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["terminal_culture", "general_internet"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
