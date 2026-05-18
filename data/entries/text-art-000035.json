@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000035",
+  "art": "=== NEWS ===",
+  "art_type": "ascii_7bit",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "=== NEWS === 新しい更新があります。",
+  "intended_meaning": "ASCII装飾による見出し",
+  "plain_text": "NEWSという見出しをASCII記号で強調している。",
+  "emotion": ["neutral"],
+  "tone": "technical_status",
+  "possible_misreadings": ["等号の装飾を見出しとして扱わない", "NEWSだけを読み装飾の役割を落とす"],
+  "display_requirements": {
+    "monospace_required": true,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["bbs_culture", "general_internet"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
