@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000013",
+  "art": "T_T",
+  "art_type": "ascii_7bit",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "データ消えたT_T",
+  "intended_meaning": "泣き・悲しみ・ショック",
+  "plain_text": "データが消えてしまい、泣きたいほど悲しんでいる。",
+  "emotion": ["sadness"],
+  "tone": "soft_negative",
+  "possible_misreadings": ["英字とアンダースコアの並びとしてだけ処理する"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["general_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
