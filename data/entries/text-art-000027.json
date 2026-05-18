@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000027",
+  "art": "(・∀・)",
+  "art_type": "kaomoji",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "うまくいった(・∀・)",
+  "intended_meaning": "嬉しさ・明るい反応",
+  "plain_text": "うまくいって、明るく嬉しそうにしている。",
+  "emotion": ["joy"],
+  "tone": "casual",
+  "possible_misreadings": ["無表情として解釈する", "顔文字として認識しない"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
