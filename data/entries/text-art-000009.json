@@ -1,10 +1,10 @@
 {
   "id": "text-art-000009",
-  "art": "/\\_/\\\n( o.o )\n > ^ <",
+  "art": "/\\_/\\\\\n( o.o )\n > ^ <",
   "art_type": "multi_line_text_picture",
   "charset_class": "ascii_7bit",
   "line_count": 3,
-  "context_text": "猫っぽいAAを添える。\n/\\_/\\\n( o.o )\n > ^ <",
+  "context_text": "猫っぽいAAを添える。\n/\\_/\\\\\n( o.o )\n > ^ <",
   "intended_meaning": "猫を表す文字絵",
   "plain_text": "猫を文字で表して、かわいらしい雰囲気を添えている。",
   "emotion": ["joy"],
