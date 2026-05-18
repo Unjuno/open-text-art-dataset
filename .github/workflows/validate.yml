@@ -31,6 +31,9 @@ jobs:
       - name: Validate generated reviewed dataset
         run: python scripts/validate_jsonl.py data/reviewed/v0.1.jsonl --schema schemas/entry.schema.json
 
+      - name: Validate dataset policy
+        run: python scripts/validate_dataset_policy.py
+
       - name: Report near-duplicate candidates
         run: python scripts/report_near_duplicates.py --threshold 0.85
 
