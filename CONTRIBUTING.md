@@ -39,6 +39,62 @@ make check
 
 CI validates entries, checks duplicate IDs, checks duplicate `art` strings, checks `line_count`, rebuilds JSONL artifacts, validates dataset policy rules, reports near-duplicate candidates, and fails if generated artifacts are not committed.
 
+## Normal data-entry PR scope
+
+For normal dataset contributions, keep the PR focused on dataset entries.
+
+Allowed normal data-entry changes:
+
+```text
+data/entries/text-art-*.json
+data/samples.jsonl
+data/reviewed/v0.1.jsonl
+README.md dataset count
+```
+
+`data/samples.jsonl`, `data/reviewed/v0.1.jsonl`, and the README dataset count should change only as the result of running:
+
+```bash
+make sync
+```
+
+Do not mix normal data-entry changes with changes to:
+
+```text
+.github/**
+scripts/**
+schemas/**
+DATA_LICENSE.md
+LICENSE*
+```
+
+Open a separate maintainer-discussion PR for workflow, script, schema, or license-policy changes.
+
+通常のデータ追加PRでは、PRをデータ項目の追加・修正に集中させてください。
+
+通常許可される変更範囲：
+
+```text
+data/entries/text-art-*.json
+data/samples.jsonl
+data/reviewed/v0.1.jsonl
+README.md の件数表示
+```
+
+`data/samples.jsonl`、`data/reviewed/v0.1.jsonl`、README件数は `make sync` の結果としてのみ変更してください。
+
+通常のデータ追加PRでは、以下を混ぜないでください。
+
+```text
+.github/**
+scripts/**
+schemas/**
+DATA_LICENSE.md
+LICENSE*
+```
+
+workflow、script、schema、license policy の変更は、別PRとして管理者向けに提案してください。
+
 ## Generated file automation
 
 Generated files are:
