@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000028",
+  "art": "(ノД`)・゜・。",
+  "art_type": "kaomoji",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "全部やり直しだ(ノД`)・゜・。",
+  "intended_meaning": "泣き・強い落胆",
+  "plain_text": "全部やり直しになってしまい、泣きたいほど落ち込んでいる。",
+  "emotion": ["sadness", "despair"],
+  "tone": "soft_negative",
+  "possible_misreadings": ["単なる装飾付き文字列として処理する", "怒りとして誤読する"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
