@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000012",
+  "art": ":P",
+  "art_type": "ascii_7bit",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "I forgot again :P",
+  "intended_meaning": "冗談めいた照れ・軽いふざけ",
+  "plain_text": "また忘れてしまったが、深刻ではなく冗談っぽく受け流している。",
+  "emotion": ["humor"],
+  "tone": "joking",
+  "possible_misreadings": ["文字列としてだけ処理し、ふざけた口調を落とす"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["western_emoticon", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
