@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000005",
+  "art": "(´・ω・｀)",
+  "art_type": "kaomoji",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "何も分からん(´・ω・｀)",
+  "intended_meaning": "困惑・弱気・軽い落ち込み",
+  "plain_text": "何も分からず、少し困って落ち込んでいる。",
+  "emotion": ["confusion", "sadness"],
+  "tone": "soft_negative",
+  "possible_misreadings": ["単なる無表情として解釈する"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
