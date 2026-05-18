@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000008",
+  "art": "¯\\_(ツ)_/¯",
+  "art_type": "unicode_text_art",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "原因は分からない¯\\_(ツ)_/¯",
+  "intended_meaning": "分からない・仕方ないという軽い諦め",
+  "plain_text": "原因は分からないが、仕方ないという態度を軽く表している。",
+  "emotion": ["confusion", "humor"],
+  "tone": "casual",
+  "possible_misreadings": ["腕を広げるジェスチャーとして認識できない"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["general_internet", "western_emoticon"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
