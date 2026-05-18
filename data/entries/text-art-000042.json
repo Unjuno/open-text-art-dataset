@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000042",
+  "art": "（　´∀｀）",
+  "art_type": "shift_jis_style",
+  "charset_class": "shift_jis",
+  "line_count": 1,
+  "context_text": "いい感じ（　´∀｀）",
+  "intended_meaning": "穏やかな喜び・肯定的反応",
+  "plain_text": "いい感じだと思っており、穏やかに喜んでいる。",
+  "emotion": ["joy"],
+  "tone": "casual",
+  "possible_misreadings": ["単なる括弧付き文字列として処理する", "強い興奮として過剰に読む"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "bbs_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
