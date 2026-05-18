@@ -25,10 +25,10 @@ Create a new entry template:
 python scripts/new_entry.py
 ```
 
-Regenerate JSONL artifacts:
+Regenerate JSONL artifacts and README count:
 
 ```bash
-python scripts/build_jsonl.py
+make sync
 ```
 
 Run local checks:
@@ -38,6 +38,27 @@ make check
 ```
 
 CI validates entries, checks duplicate IDs, checks duplicate `art` strings, checks `line_count`, rebuilds JSONL artifacts, validates dataset policy rules, reports near-duplicate candidates, and fails if generated artifacts are not committed.
+
+## Generated file automation
+
+Generated files are:
+
+```text
+data/samples.jsonl
+data/reviewed/v0.1.jsonl
+README.md dataset count
+```
+
+For maintainers pushing directly to `main`, the `Sync generated files` workflow can commit generated updates automatically after `data/entries/` changes.
+
+For pull requests, the `Check generated files on PR` workflow runs `make sync`. If generated files are stale, it fails the check and adds a PR comment or workflow summary telling the contributor to run:
+
+```bash
+make sync
+make check
+```
+
+External fork pull requests may not always allow bot comments, but the workflow summary and failed check still show the required command.
 
 ## Automated policy checks
 
