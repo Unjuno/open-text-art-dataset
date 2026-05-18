@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000030",
+  "art": "<(^_^<)",
+  "art_type": "kaomoji",
+  "charset_class": "ascii_7bit",
+  "line_count": 1,
+  "context_text": "少し進んだ <(^_^<)",
+  "intended_meaning": "小さな喜び・踊るような反応",
+  "plain_text": "少し進展があり、軽く喜んでいる。",
+  "emotion": ["joy"],
+  "tone": "playful",
+  "possible_misreadings": ["小なり記号や括弧としてだけ読む", "踊るような形を認識しない"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["general_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
