@@ -4,6 +4,38 @@ Open dataset for text-based visual expressions such as ASCII art, ANSI art, Shif
 
 文字ベースの視覚表現、すなわち ASCII art、ANSI art、Shift_JIS風テキストアート、顔文字、Unicode text art を、意味・文脈・平文化・表示条件つきで整理するオープンデータセットです。
 
+## Status
+
+Current initial dataset size: **20 reviewed entries**.
+
+現在の初期データ数: **レビュー済み20件**。
+
+## Quick start
+
+Install dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Create a new entry file:
+
+```bash
+python scripts/new_entry.py
+```
+
+Build generated JSONL files:
+
+```bash
+python scripts/build_jsonl.py
+```
+
+Run all local checks:
+
+```bash
+make check
+```
+
 ## Documents
 
 | Language | Overview | Dataset Card | Contributing | Taxonomy |
@@ -32,7 +64,7 @@ data/samples.jsonl
 data/reviewed/v0.1.jsonl
 ```
 
-Build JSONL artifacts:
+Do **not** manually edit generated JSONL files. Edit `data/entries/*.json`, then run:
 
 ```bash
 python scripts/build_jsonl.py
@@ -41,7 +73,9 @@ python scripts/build_jsonl.py
 Validate dataset files:
 
 ```bash
+python scripts/validate_entries.py
 python scripts/validate_jsonl.py data/samples.jsonl data/reviewed/v0.1.jsonl
+python scripts/report_near_duplicates.py
 ```
 
 ## Initial scope
