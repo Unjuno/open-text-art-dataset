@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000043",
+  "art": "（；´Д｀）",
+  "art_type": "shift_jis_style",
+  "charset_class": "shift_jis",
+  "line_count": 1,
+  "context_text": "処理が重い（；´Д｀）",
+  "intended_meaning": "困惑・疲れ・負荷への反応",
+  "plain_text": "処理が重くて、困って疲れている。",
+  "emotion": ["confusion"],
+  "tone": "soft_negative",
+  "possible_misreadings": ["単なる疲労ではなく怒りとして読む", "顔文字として認識しない"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "bbs_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
