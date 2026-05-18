@@ -1,0 +1,22 @@
+{
+  "id": "text-art-000029",
+  "art": "ヽ(｀Д´)ﾉ",
+  "art_type": "kaomoji",
+  "charset_class": "unicode_text",
+  "line_count": 1,
+  "context_text": "また壊れたヽ(｀Д´)ﾉ",
+  "intended_meaning": "怒り・不満",
+  "plain_text": "また壊れてしまい、怒って不満を表している。",
+  "emotion": ["anger"],
+  "tone": "soft_negative",
+  "possible_misreadings": ["冗談ではなく深刻な攻撃として過剰に読む", "顔文字の怒りを見落とす"],
+  "display_requirements": {
+    "monospace_required": false,
+    "known_font_dependency": false,
+    "preserve_line_breaks": true
+  },
+  "cultural_context": ["japanese_internet", "chat_culture"],
+  "source_type": "original",
+  "license": "CC0-1.0",
+  "review_status": "reviewed"
+}
