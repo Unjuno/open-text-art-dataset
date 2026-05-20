@@ -1,0 +1,70 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
+language: "ja-JP"
+early_access: false
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  high_level_summary_in_walkthrough: true
+  review_status: true
+  review_details: true
+  commit_status: true
+  fail_commit_status: false
+  collapse_walkthrough: true
+  changed_files_summary: true
+  poem: false
+  in_progress_fortune: false
+  enable_prompt_for_ai_agents: false
+
+  path_filters:
+    - "!data/samples.jsonl"
+    - "!data/reviewed/*.jsonl"
+    - "!dist/**"
+    - "!build/**"
+    - "!__pycache__/**"
+    - "!*.pyc"
+
+  path_instructions:
+    - path: "data/entries/**"
+      instructions: >
+        This repository is an open dataset for text-based visual expressions.
+        Focus on schema consistency, provenance, licensing risk, duplicate or near-duplicate
+        entries, harmful/private content, and whether generated JSONL files were edited
+        instead of source entry JSON files.
+    - path: "scripts/**"
+      instructions: >
+        Check validation, JSONL generation, duplicate reporting, and maintainer scripts
+        for correctness and safe failure behavior.
+    - path: "docs/**"
+      instructions: >
+        Check whether contribution guidance, dataset card, taxonomy, and license policy
+        remain consistent across Japanese and English documents.
+
+  auto_review:
+    enabled: true
+    drafts: false
+    auto_incremental_review: true
+    auto_pause_after_reviewed_commits: 5
+    ignore_title_keywords:
+      - "WIP"
+      - "Draft"
+      - "DO NOT REVIEW"
+      - "[skip review]"
+    ignore_usernames:
+      - "dependabot[bot]"
+      - "renovate[bot]"
+      - "github-actions[bot]"
+
+  finishing_touches:
+    docstrings:
+      enabled: false
+    unit_tests:
+      enabled: false
+    simplify:
+      enabled: false
+
+chat:
+  art: false
+  auto_reply: false
